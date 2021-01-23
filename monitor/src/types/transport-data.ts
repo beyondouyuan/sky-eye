@@ -12,31 +12,31 @@ export interface TransportDataType {
   authInfo: AuthInfo,
   behaviour: BehaviourPushdata[],
   data: any,
-  record: []
+  record?: []
 }
 
 export interface ReportDataType {
-  type: ERRORTYPES,
-  message: string,
+  type?: ERRORTYPES,
+  message?: string,
   url: string,
-  name: string,
-  stack: any,
-  time: number,
-  level: number,
-  errorId: string,
-  elapsedTime: number,
-  request: {
-    httpType: string,
-    traceId: string,
+  name?: string,
+  stack?: any,
+  time?: number,
+  level: string,
+  errorId?: string,
+  elapsedTime?: number,
+  request?: {
+    httpType?: string,
+    traceId?: string,
     method: string,
     url: string,
     data: any
   },
-  response: {
+  response?: {
     status: number,
     data: any
   },
-  componentName: string,
-  propsData: string,
-  customTag: string
+  componentName?: string,
+  propsData?: string,
+  customTag?: string
 }

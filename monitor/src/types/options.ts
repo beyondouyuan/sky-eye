@@ -1,3 +1,6 @@
+import { BehaviourPushdata } from './behaviour'
+import { ReportDataType } from './transport-data'
+
 type CANCEL = null | undefined | boolean
 
 export type HttpMethod = 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE' | 'OPTIONS'
@@ -20,36 +23,36 @@ export interface IBeforeAppAjaxSendConfig {
   setRequestheader: TSetRequestHeader
 }
 
-export interface InitOptions {
-  dsn: string,
-  disabled: boolean,
-  apikey: string,
-  debug: boolean,
-  enableTraceId: boolean,
-  includeHttpUrlTraceIdRegExp: RegExp,
-  traceIdFieldName: string,
-  filterXhrUrlRegExp: RegExp,
-  maxBehaviour: number
+export interface InitOptions extends SlientEventTypes, HooksType {
+  dsn?: string,
+  disabled?: boolean,
+  apikey?: string,
+  debug?: boolean,
+  enableTraceId?: boolean,
+  includeHttpUrlTraceIdRegExp?: RegExp,
+  traceIdFieldName?: string,
+  filterXhrUrlRegExp?: RegExp,
+  maxBehaviour?: number
 }
 
 export interface HooksType {
-  configReportXhr(xhr: XMLHttpRequest): void,
+  configReportXhr?(xhr: XMLHttpRequest): void,
 
-  beforeDataReport(): CANCEL,
-  beforePushBehaviour(): CANCEL
-  beforeAppAjaxSend(config: IRequestHeaderConfig): void,
-  backTrackerId(): string
+  beforeDataReport?(event: ReportDataType): PromiseLike<ReportDataType | null> | ReportDataType | CANCEL,
+  beforePushBehaviour?(hint: BehaviourPushdata): CANCEL
+  beforeAppAjaxSend?(config: IRequestHeaderConfig, setRequestheader: IBeforeAppAjaxSendConfig): void,
+  backTrackerId?(): string | number
 }
 
 export interface SlientEventTypes {
-  slientXhr: boolean,
-  slientFetch: boolean,
-  slientConsole: boolean,
-  slientDom: boolean,
-  slientHistory: boolean,
-  slientHashchange: boolean,
-  slientError: boolean,
-  silentUnhandledrejection: boolean,
-  slientVue: boolean,
-  slientReact: boolean
+  slientXhr?: boolean,
+  slientFetch?: boolean,
+  slientConsole?: boolean,
+  slientDom?: boolean,
+  slientHistory?: boolean,
+  slientHashchange?: boolean,
+  slientError?: boolean,
+  silentUnhandledrejection?: boolean,
+  slientVue?: boolean,
+  slientReact?: boolean
 }
