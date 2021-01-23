@@ -25,6 +25,14 @@ export const variableTypeDictionary = {
   isWindow: isType('Window')
 }
 
+export function isEmptyObject (obj: Object): boolean {
+  return variableTypeDictionary.isObject(obj) && Object.keys(obj).length === 0
+}
+
+export function isEmpty (wat: any): boolean {
+  return (variableTypeDictionary.isString(wat) && wat.trim() === '') || wat === undefined || wat === null
+}
+
 export function isError (wat: any): boolean {
   switch (nativeToString.call(wat)) {
     case '[object Error]':
