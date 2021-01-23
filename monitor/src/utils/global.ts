@@ -1,3 +1,3 @@
 export function behaviour () {
-  return 'name'
+  return ''
 }
