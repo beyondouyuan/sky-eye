@@ -1,4 +1,5 @@
 import { EVENTTYPES } from '../shared/constant'
+import { _global, on } from '../utils'
 
 function replace (type: EVENTTYPES) {
   switch (type) {
@@ -10,8 +11,8 @@ function replace (type: EVENTTYPES) {
   }
 }
 
-export function addReplaceHandler (hanler: any) {
-  replace(hanler.type)
+export function addReplaceHandler (handler: any) {
+  replace(handler.type)
 }
 
 function xhrReplace (): void {

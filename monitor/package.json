@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/src/index.d.ts",
-  "alia": "SKYMONITOR",
+  "alias": "SKYMONITOR",
   "scripts": {
     "build": "cross-env IGNORE=localDebug rollup --config",
     "watch:groot": "cross-env INCLUDE=localDebug rollup  --config --watch",

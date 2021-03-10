@@ -48,7 +48,7 @@ const esmPackage = {
   output: {
     file: 'dist/index.esm.js',
     format: 'esm',
-    name: pkg.alia,
+    name: pkg.alias,
     sourcemap: true
   },
   plugins: [
@@ -69,7 +69,7 @@ const cjsPackage = {
   output: {
     file: 'dist/index.js',
     format: 'cjs',
-    name: pkg.alia,
+    name: pkg.alias,
     sourcemap: true
   },
   plugins: [
@@ -86,7 +86,7 @@ const localDebug = {
   output: {
     file: '/Users/irving/Desktop/tryCatch/github/mito-vue-demo/src/bundle.js',
     format: 'esm',
-    name: pkg.alia
+    name: pkg.alias
   },
   plugins: [
     ...common.plugins,
@@ -102,7 +102,7 @@ const iifePackage = {
   output: {
     file: 'dist/index.min.js',
     format: 'iife',
-    name: pkg.alia
+    name: pkg.alias
   },
   plugins: [
     ...common.plugins,
