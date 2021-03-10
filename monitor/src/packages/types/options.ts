@@ -1,4 +1,4 @@
-import { BehaviourPushdata } from './behaviour'
+import { BehaviorPushData } from './behavior'
 import { ReportDataType } from './transport-data'
 
 type CANCEL = null | undefined | boolean
@@ -39,7 +39,7 @@ export interface HooksType {
   configReportXhr?(xhr: XMLHttpRequest): void,
 
   beforeDataReport?(event: ReportDataType): PromiseLike<ReportDataType | null> | ReportDataType | CANCEL,
-  beforePushBehaviour?(hint: BehaviourPushdata): CANCEL
+  beforePushBehaviour?(hint: BehaviorPushData): CANCEL
   beforeAppAjaxSend?(config: IRequestHeaderConfig, setRequestheader: IBeforeAppAjaxSendConfig): void,
   backTrackerId?(): string | number
 }

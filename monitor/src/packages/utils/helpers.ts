@@ -1,5 +1,5 @@
 import { IAnyObject, IntegrationError } from '../types/common'
-import { GLOBAL_CONSTANT, HTTPCODE, ERRORTYPES } from '../common/constant'
+import { GLOBAL_CONSTANT, HTTPCODE, ERRORTYPES } from '../shared/constant'
 
 import { nativeToString, variableTypeDictionary } from './is'
 

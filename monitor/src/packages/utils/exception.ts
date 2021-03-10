@@ -1,4 +1,4 @@
-import { voidFun } from '../common/constant'
+import { voidFun } from '../shared/constant'
 
 export function nativeTryCatch (fn: voidFun, errorFn?: (err: any) => void): void {
   try {

@@ -1,5 +1,5 @@
-import { ERRORTYPES } from '../common/constant'
-import { BehaviourPushdata } from './behaviour'
+import { ERRORTYPES } from '../shared/constant'
+import { BehaviorPushData } from './behavior'
 
 export interface AuthInfo {
   apiKey: string,
@@ -10,7 +10,7 @@ export interface AuthInfo {
 
 export interface TransportDataType {
   authInfo: AuthInfo,
-  behaviour: BehaviourPushdata[],
+  behavior: BehaviorPushData[],
   data: any,
   record?: []
 }

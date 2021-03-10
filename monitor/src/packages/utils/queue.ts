@@ -1,4 +1,4 @@
-import { voidFun } from '../common/constant'
+import { voidFun } from '../shared/constant'
 
 import { _global } from './global'
 

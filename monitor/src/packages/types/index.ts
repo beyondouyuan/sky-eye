@@ -1,4 +1,4 @@
-export * from './behaviour'
+export * from './behavior'
 export * from './common'
 export * from './options'
 export * from './replace'

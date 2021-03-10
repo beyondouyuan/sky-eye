@@ -1,4 +1,4 @@
-import { BEHAVIOURTYPES, ERRORTYPES } from '../common/constant'
+import { BEHAVIOURTYPES, ERRORTYPES } from '../shared/constant'
 
 /**
  * 资源错误

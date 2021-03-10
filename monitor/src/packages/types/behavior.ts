@@ -1,4 +1,4 @@
-export interface BehaviourPushdata {
+export interface BehaviorPushData {
   // 事件类型
   type: string,
   // 数据类型

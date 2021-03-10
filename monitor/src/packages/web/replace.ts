@@ -1,4 +1,4 @@
-import { EVENTTYPES } from '../common/constant'
+import { EVENTTYPES } from '../shared/constant'
 
 function replace (type: EVENTTYPES) {
   switch (type) {
